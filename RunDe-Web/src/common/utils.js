@@ -1,3 +1,7 @@
+/**
+ * 公共方法库
+ * */
+
 /* eslint-disable */
 window.DEBUG = true
 

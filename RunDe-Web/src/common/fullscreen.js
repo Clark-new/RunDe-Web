@@ -1,3 +1,7 @@
+/**
+ * 全屏功能js库
+ * */
+
 /* eslint-disable */
 
 export default class FullScreen {

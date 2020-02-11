@@ -25,6 +25,9 @@
 </template>
 
 <script>
+/**
+ * 点赞组件
+ * */
 import Tap from './Tap'
 import Flutter from './Flutter'
 const Heart = () => ({

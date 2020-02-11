@@ -1,3 +1,7 @@
+/**
+ * flash提示js库
+ * */
+
 var $ = window.$
 
 var flashTip = {

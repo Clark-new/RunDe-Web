@@ -5,6 +5,9 @@
 </template>
 
 <script>
+/**
+ * 数字跳动动画组件
+ * */
 import {TweenLite} from 'gsap/TweenMax'
 
 export default {

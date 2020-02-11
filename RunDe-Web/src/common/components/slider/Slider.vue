@@ -15,6 +15,9 @@
 </template>
 
 <script>
+/**
+ * 观看回放进度条组件
+ * */
 import {log} from 'common/utils'
 
 export default {

@@ -12,6 +12,9 @@
 </template>
 
 <script>
+/**
+ * 聊天信息组件
+ * */
 export default {
   name: 'Chats',
   props: {

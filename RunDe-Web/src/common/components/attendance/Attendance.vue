@@ -22,6 +22,9 @@
 </template>
 
 <script>
+/**
+ * 打卡组件
+ * */
 import HuodeScene from 'common/websdk/live'
 import VanPopup from 'vant/lib/popup'
 import 'vant/lib/button/style'

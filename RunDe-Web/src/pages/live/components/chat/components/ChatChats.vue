@@ -67,7 +67,7 @@
           <span class="two-btn-text">扣2</span>
         </div>
         <div class="only-read-wrap">
-          <span class="only-read-wrap_img" :class="{'only-read-wrap_img--active': checked}"></span>
+          <span @click="handleCircleClick" class="only-read-wrap_img" :class="{'only-read-wrap_img--active': checked}"></span>
           <el-checkbox v-model="checked" @change="onChange" fill="#333333">
             <span class="only-read-text">只看老师</span>
           </el-checkbox>
@@ -96,6 +96,9 @@
 </template>
 
 <script>
+/**
+ * 聊天组件
+ * */
 import BScroll from 'better-scroll'
 import hdChats from 'common/components/chats/Chats'
 import HuodeScene from 'common/websdk/live'
@@ -121,7 +124,7 @@ export default {
       text: '',
       checked: false,
       messages: [],
-      messagesLength: 200,
+      messagesLength: 100,
       isScroll: true,
       isShowEmoticon: false,
       tipOption: {},
@@ -298,6 +301,9 @@ export default {
     },
     onChange () {
       this.scrollTo()
+    },
+    handleCircleClick () {
+      this.checked = !this.checked
     }
   },
   mounted () {

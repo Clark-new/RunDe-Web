@@ -12,6 +12,9 @@
 </template>
 
 <script>
+/**
+ * 聊天容器组件
+ * */
 export default {
   name: 'ChatTabs',
   data () {

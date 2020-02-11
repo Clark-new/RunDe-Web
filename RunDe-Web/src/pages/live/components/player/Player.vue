@@ -40,6 +40,9 @@
 </template>
 
 <script>
+/**
+ * 播放器入口组件
+ * */
 import PlayerPlayer from './components/PlayerPlayer'
 import PlayerDrawpanel from './components/PlayerDrawpanel'
 import PlayerControl from './components/PlayerControl'

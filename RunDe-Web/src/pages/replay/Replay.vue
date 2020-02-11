@@ -17,6 +17,9 @@
 </template>
 
 <script>
+/**
+ * 回放入口组件
+ * */
 import ReplayHeader from './components/header/Header'
 import ReplayPlayer from './components/player/Player'
 import ReplayChat from './components/chat/Chat'

@@ -38,6 +38,9 @@
 </template>
 
 <script>
+/**
+ * 打赏送礼物提示划入动画组件
+ * */
 import TweenLite from './TweenLite'
 
 export default {

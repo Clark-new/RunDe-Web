@@ -14,6 +14,9 @@
 </template>
 
 <script>
+/**
+ * 点赞组件 动画组件
+ * */
 import Velocity from 'velocity-animate'
 import 'velocity-animate/velocity.ui.js'
 

@@ -5,6 +5,9 @@
 </template>
 
 <script>
+/**
+ * 动画组件
+ * */
 export default {
   name: 'Fade',
   props: {

@@ -3,6 +3,9 @@
 </template>
 
 <script>
+/**
+ * 弹幕组件
+ * */
 /* eslint-disable */
 import {
   DanmakuPool,

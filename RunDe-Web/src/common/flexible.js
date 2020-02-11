@@ -1,3 +1,7 @@
+/**
+ * rem布局
+ * */
+
 /* eslint-disable */
 
 (function (win, lib) {

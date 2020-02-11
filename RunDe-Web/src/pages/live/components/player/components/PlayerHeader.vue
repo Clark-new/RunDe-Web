@@ -33,6 +33,9 @@
 </template>
 
 <script>
+/**
+ * 播放器header栏组件
+ * */
 import HuodeScene from 'common/websdk/live'
 
 export default {

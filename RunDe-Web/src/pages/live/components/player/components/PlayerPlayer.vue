@@ -20,6 +20,9 @@
 </template>
 
 <script>
+/**
+ * 播放器组件
+ * */
 import Drag from './drag'
 import hdInteraction from 'common/components/interaction/Interaction'
 

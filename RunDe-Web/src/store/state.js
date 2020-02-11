@@ -18,6 +18,9 @@ function getDefaultUrl () {
   return defaultUrl
 }
 
+/**
+ * 直播目录页面
+ * */
 function getLists () {
   const lists = [
     {

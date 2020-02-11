@@ -19,6 +19,9 @@
 </template>
 
 <script>
+/**
+ * 登录组件
+ * */
 import {isAddress} from 'common/utils'
 import {mapState, mapMutations, mapGetters} from 'vuex'
 

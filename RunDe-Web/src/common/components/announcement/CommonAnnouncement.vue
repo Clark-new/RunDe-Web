@@ -13,6 +13,9 @@
 </template>
 
 <script>
+/**
+ * 公告组件
+ * */
 import HuodeScene from 'common/websdk/live'
 import { log } from 'common/utils'
 

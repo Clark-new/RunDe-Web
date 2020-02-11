@@ -21,6 +21,9 @@
 </template>
 
 <script>
+/**
+ * 文档组件
+ * */
 import Drag from './drag'
 
 export default {

@@ -24,6 +24,9 @@
 </template>
 
 <script>
+/**
+ * 直播目录组件
+ * */
 import {mapState, mapMutations, mapGetters} from 'vuex'
 import {isAddress, log} from 'common/utils'
 import BScroll from 'better-scroll'

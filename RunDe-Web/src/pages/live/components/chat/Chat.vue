@@ -8,6 +8,9 @@
 </template>
 
 <script>
+/**
+ * 聊天入口组件
+ * */
 import ChatTabs from './components/ChatTabs'
 const ChatChats = () => ({
   component: import('./components/ChatChats')

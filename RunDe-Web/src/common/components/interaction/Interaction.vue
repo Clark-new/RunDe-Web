@@ -13,6 +13,9 @@
 </template>
 
 <script>
+/**
+ * 连麦组件
+ * */
 export default {
   name: 'Interaction',
   props: {

@@ -101,6 +101,9 @@
 </template>
 
 <script>
+/**
+ * 播放器footer栏组件
+ * */
 import {log} from 'common/utils'
 import HuodeScene from 'common/websdk/live'
 import {mapState} from 'vuex'

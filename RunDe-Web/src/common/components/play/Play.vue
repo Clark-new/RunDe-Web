@@ -16,6 +16,9 @@
 </template>
 
 <script>
+/**
+ * 播放按钮组件
+ * */
 import hdFade from 'common/components/fade/Fade'
 
 export default {

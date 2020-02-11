@@ -8,6 +8,9 @@
 </template>
 
 <script>
+/**
+ * 点赞组件 按钮组件
+ * */
 export default {
   name: 'Tap'
 }

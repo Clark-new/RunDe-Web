@@ -1,3 +1,7 @@
+/**
+ * playbackSDK.js 观看回放 WEB SDK 方法封装
+ * */
+
 let $ = window.$
 
 class HuodeScene {

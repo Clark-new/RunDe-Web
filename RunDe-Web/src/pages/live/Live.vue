@@ -21,6 +21,9 @@
 </template>
 
 <script>
+/**
+ * 直播入口组件
+ * */
 import LiveHeader from './components/header/Header'
 import LivePlayer from './components/player/Player'
 import LiveChat from './components/chat/Chat'

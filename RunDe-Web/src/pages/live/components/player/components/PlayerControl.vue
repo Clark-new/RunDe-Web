@@ -67,6 +67,9 @@
 </template>
 
 <script>
+/**
+ * 播放器控制器组件
+ * */
 import FullScreen from 'common/fullscreen'
 import HuodeScene from 'common/websdk/live'
 import CommonDanmaku from 'common/components/danmaku/Danmaku'
