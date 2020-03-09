@@ -133,7 +133,7 @@ export default {
   .tip-wrapper
     position absolute
     border-radius 0px 34px 34px 0px; /*no*/
-    width 365px
+    width 385px
     height 68px
     background linear-gradient(90deg, rgba(255, 113, 129, 1) 0%, rgba(255, 81, 81, 1) 100%)
     padding-left 28px
@@ -174,4 +174,7 @@ export default {
         vertical-align middle
       .tip-number
         vertical-align middle
+        display inline-block
+        min-width 60px
+        padding 2px 5px
 </style>

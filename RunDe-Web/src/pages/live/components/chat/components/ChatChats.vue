@@ -102,7 +102,7 @@
 import BScroll from 'better-scroll'
 import hdChats from 'common/components/chats/Chats'
 import HuodeScene from 'common/websdk/live'
-import {showEm, formatRewardAndGiftToTip, shieldEmoticon, formatQ12} from 'common/utils'
+import {showEm, formatRewardAndGiftToTip, shieldEmoticon, formatQ12, log} from 'common/utils'
 import { EmoticonList, translateWXEm } from 'common/plist'
 import {mapState} from 'vuex'
 const hdSlide = () => ({
@@ -145,7 +145,16 @@ export default {
       return group
     },
     limitMessages () {
-      const messages = [...this.messages]
+      let messages = [...this.messages]
+      messages = messages.filter((item) => {
+        if (item.userId === this.viewer.id) {
+          return true
+        } else if (item.status === '0') {
+          return true
+        } else {
+          return false
+        }
+      })
       return messages.splice(-this.messagesLength)
     },
     verify () {
@@ -229,6 +238,20 @@ export default {
       this.bus.$emit('danmaku', text)
     },
     addEvents () {
+      this.HD.onPublicChatLogManage((datas) => {
+        log('onPublicChatLogManage', datas)
+        var data = JSON.parse(datas)
+        var status = data.status
+        var chatIds = data.chatIds
+        for (var i = 0; i < chatIds.length; i++) {
+          var id = chatIds[i]
+          this.messages.forEach((item) => {
+            if (item.chatId === id) {
+              item.status = status
+            }
+          })
+        }
+      })
       this.HD.onPublicChatMessage((message) => {
         const _msg = JSON.parse(message)
         const self = this.viewer.id === _msg.userid

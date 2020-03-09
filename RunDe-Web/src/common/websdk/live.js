@@ -267,6 +267,12 @@ class HuodeScene {
     }
   }
 
+  onPublicChatLogManage (callback) {
+    DWLive.onPublicChatLogManage = function (message) {
+      callback && callback(message)
+    }
+  }
+
   // 获取直播间配置信息，如：连麦
   onRoomSetting (callback) {
     DWLive.onRoomSetting = function (options) {
