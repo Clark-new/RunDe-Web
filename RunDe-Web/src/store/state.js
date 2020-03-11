@@ -4,7 +4,8 @@ export default {
   template: {},
   options: {},
   playerStatus: false,
-  lists: getLists()
+  lists: getLists(),
+  allowChat: true
 }
 
 function getDefaultUrl () {

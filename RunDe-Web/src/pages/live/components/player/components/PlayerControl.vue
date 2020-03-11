@@ -75,6 +75,7 @@ import HuodeScene from 'common/websdk/live'
 import CommonDanmaku from 'common/components/danmaku/Danmaku'
 import {log} from 'common/utils'
 import { bind, clear } from 'size-sensor'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'PlayerControl',
@@ -144,6 +145,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['changeAllowChat']),
     handleSwitchScreenClick () {
       if (this.toggleSwitchScreenBtnStatus) {
         let status = !this.switchStatus
@@ -187,6 +189,11 @@ export default {
           this.isShowInteractionBtn = true
         } else {
           this.isShowInteractionBtn = false
+        }
+        if (options.allow_chat === 'true') {
+          this.changeAllowChat(true)
+        } else {
+          this.changeAllowChat(false)
         }
       })
       this.HD.onInteractionRemoteMedia(() => {

@@ -104,9 +104,9 @@
 /**
  * 播放器footer栏组件
  * */
-import {log} from 'common/utils'
+import { log } from 'common/utils'
 import HuodeScene from 'common/websdk/live'
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'PlayerFooter',
@@ -185,7 +185,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['viewer']),
+    ...mapState(['viewer', 'allowChat']),
     giftOptions () {
       const options = []
       const postfix = '.png'
@@ -224,17 +224,28 @@ export default {
       }
     },
     mouseEnterReward () {
+      if (!this.allowChat) {
+        return false
+      }
       this.isShowRewardQRCode = true
     },
     mouseLeaveReward () {
       this.isShowRewardQRCode = false
     },
     handleRewardClick () {
+      if (!this.allowChat) {
+        this.bus.$emit('allowChat', this.allowChat)
+        return false
+      }
       const url = this.giftUrl + 'gift2.png'
       const msg = '打赏给老师[cem_' + url + ']￥100'
       this.HD.sendPublicChatMsg(msg)
     },
     handleClickGift (url, customName) {
+      if (!this.allowChat) {
+        this.bus.$emit('allowChat', this.allowChat)
+        return false
+      }
       const msg = '赠送给老师[cem_' + url + ']x'
       this.selectGift = {
         giftMsg: msg,

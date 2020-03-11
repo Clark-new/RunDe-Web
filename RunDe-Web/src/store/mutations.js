@@ -17,5 +17,8 @@ export default {
   },
   changePlayerStatus (state, status) {
     state.playerStatus = status
+  },
+  changeAllowChat (state, status) {
+    state.allowChat = status
   }
 }

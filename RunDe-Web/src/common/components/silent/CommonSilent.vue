@@ -20,6 +20,7 @@
  * */
 import HuodeScene from 'common/websdk/live'
 import { log } from 'common/utils'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'CommonSilent',
@@ -37,6 +38,7 @@ export default {
     this.addEvents()
   },
   methods: {
+    ...mapMutations(['changeAllowChat']),
     addEvents () {
       this.hd.onInformation((info) => {
         log('onInformation', info)
@@ -45,10 +47,18 @@ export default {
       this.hd.onBanChat((isBan) => {
         log('onBanChat', isBan)
         this.popup(true, '全体禁言', '讲师已开启全体禁言')
+        this.changeAllowChat(false)
       })
       this.hd.onUnBanChat((isBan) => {
         log('onUnBanChat', isBan)
         this.popup(false, '解除全体禁言', '讲师已解除全体禁言')
+        this.changeAllowChat(true)
+      })
+      this.bus.$on('allowChat', (ac) => {
+        log('allowChat', ac)
+        if (!ac) {
+          this.popup(true, '全体禁言', '讲师已开启全体禁言')
+        }
       })
     },
     popup (isBan, title, banInfo) {
@@ -77,7 +87,7 @@ export default {
   height 100%
   width 100%
   background-color rgba(0, 0, 0, 0.5)
-  z-index 3
+  z-index 6
   .silent-wrap__content-wrap
     width 214px
     height 207px
