@@ -1,7 +1,10 @@
 <template>
   <div class="chat-wrapper">
     <chat-tabs>
-      <chat-chats slot="chats"></chat-chats>
+      <chat-chats slot="chats">
+
+
+      </chat-chats>
       <hd-lists slot="lists"></hd-lists>
     </chat-tabs>
   </div>

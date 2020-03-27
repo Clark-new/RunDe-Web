@@ -95,6 +95,8 @@
   </div>
 </template>
 
+
+
 <script>
 /**
  * 聊天组件
@@ -286,7 +288,9 @@ export default {
           active: active
         }
         this.messages.push(formatMsg)
-        this.sendBarrage(_msg)
+        if(parseInt(formatMsg.status,10) == 0){
+          this.sendBarrage(_msg)
+        }
         this.scrollTo()
         this.sendTip(_msg)
       })
