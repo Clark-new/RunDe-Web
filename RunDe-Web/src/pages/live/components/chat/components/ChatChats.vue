@@ -95,8 +95,6 @@
   </div>
 </template>
 
-
-
 <script>
 /**
  * 聊天组件
@@ -250,6 +248,7 @@ export default {
           this.messages.forEach((item) => {
             if (item.chatId === id) {
               item.status = status
+              this.sendBarrage(item.info)
             }
           })
         }
@@ -283,12 +282,13 @@ export default {
           time: _msg.time,
           status: _msg.status,
           chatId: _msg.chatId,
+          info: _msg,
           type: type,
           show: show,
           active: active
         }
         this.messages.push(formatMsg)
-        if(parseInt(formatMsg.status,10) == 0){
+        if (parseInt(formatMsg.status, 10) === 0) {
           this.sendBarrage(_msg)
         }
         this.scrollTo()

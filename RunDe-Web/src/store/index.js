@@ -1,22 +1,20 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import state from './state'
-import mutations from './mutations'
 import getters from './getters'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    url: getDefaultUrl(),
+    url: '',
     viewer: {},
     template: {},
     options: {},
     playerStatus: false,
-    lists: getLists(),
+    lists: '',
     allowChat: true
   },
-  mutations:  {
+  mutations: {
     changeUrl (state, url) {
       state.url = url
       try {
