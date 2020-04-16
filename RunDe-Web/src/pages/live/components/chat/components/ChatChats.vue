@@ -288,7 +288,7 @@ export default {
           active: active
         }
         this.messages.push(formatMsg)
-        if (parseInt(formatMsg.status, 10) === 0) {
+        if (parseInt(formatMsg.status, 10) === 0 || self) {
           this.sendBarrage(_msg)
         }
         this.scrollTo()

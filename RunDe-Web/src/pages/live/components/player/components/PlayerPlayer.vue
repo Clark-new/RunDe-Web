@@ -3,7 +3,7 @@
     <vue-drag-resize
       ref="Drag"
       class="drag-resize-wrap"
-      :isDraggable="drag.isDraggable"
+      :isDraggable="drag.isDraggable && canDragView"
       :isActive="drag.active"
       :isResizable="drag.resizable"
       @dragging="onDragGing"
@@ -54,6 +54,9 @@ export default {
     },
     interactionSmall () {
       return 'interaction-' + this.size
+    },
+    canDragView () {
+      return this.size === 'small'
     }
   },
   methods: {
